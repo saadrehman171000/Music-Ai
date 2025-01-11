@@ -67,7 +67,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="w-full py-32 bg-gradient-to-b from-gray-50 to-white">
+    <section className="w-full py-32 bg-gradient-to-b from-amber-50 to-white">
       <div className="container px-4 md:px-6">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -76,7 +76,7 @@ export default function Services() {
           viewport={{ once: true }}
           className="space-y-4 text-center mb-24"
         >
-          <span className="text-[#B8860B] text-xl font-semibold tracking-wider uppercase">Services</span>
+          <span className="text-amber-700 text-xl font-semibold tracking-wider uppercase">Services</span>
           <h2 className="text-4xl md:text-6xl font-bold tracking-tighter">
             Spend Less Time In The Studio<br />And More Time Creating
           </h2>
@@ -89,14 +89,14 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group relative bg-white rounded-2xl p-8 hover:shadow-xl transition-all duration-500 border border-gray-100"
+              className="group relative bg-white rounded-2xl p-8 hover:shadow-xl transition-all duration-500 border border-amber-100"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-[#B8860B]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
               <div className="relative z-10">
-                <div className="bg-[#B8860B] rounded-2xl w-14 h-14 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="bg-gradient-to-r from-amber-500 to-amber-700 rounded-2xl w-14 h-14 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-3 group-hover:text-[#B8860B] transition-colors duration-300">
+                <h3 className="text-xl font-bold mb-3 group-hover:text-amber-700 transition-colors duration-300">
                   {service.title}
                 </h3>
                 <p className="text-gray-600">{service.description}</p>

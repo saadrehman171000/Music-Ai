@@ -23,13 +23,13 @@ export default function Footer() {
               Quickly And Effectively.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="bg-[#B8860B] p-2 rounded-full hover:bg-[#B8860B]/80 transition-colors">
+              <Link href="#" className="bg-gradient-to-r from-amber-500 to-amber-700 p-2 rounded-full hover:from-amber-600 hover:to-amber-800 transition-colors">
                 <Facebook className="h-5 w-5" />
               </Link>
-              <Link href="#" className="bg-[#B8860B] p-2 rounded-full hover:bg-[#B8860B]/80 transition-colors">
+              <Link href="#" className="bg-gradient-to-r from-amber-500 to-amber-700 p-2 rounded-full hover:from-amber-600 hover:to-amber-800 transition-colors">
                 <Youtube className="h-5 w-5" />
               </Link>
-              <Link href="#" className="bg-[#B8860B] p-2 rounded-full hover:bg-[#B8860B]/80 transition-colors">
+              <Link href="#" className="bg-gradient-to-r from-amber-500 to-amber-700 p-2 rounded-full hover:from-amber-600 hover:to-amber-800 transition-colors">
                 <Instagram className="h-5 w-5" />
               </Link>
             </div>
@@ -38,11 +38,11 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-4">QUICK LINKS</h3>
             <ul className="space-y-3">
-              {['Home', 'About Us', 'Services', 'Career', 'Subscription', 'Contact Us'].map((link) => (
+              {['Home', 'About', 'Services', 'Career', 'Subscription', 'Contact Us'].map((link) => (
                 <li key={link}>
                   <Link 
                     href={`/${link.toLowerCase().replace(' ', '-')}`} 
-                    className="text-gray-400 hover:text-[#B8860B] transition-colors flex items-center group"
+                    className="text-gray-400 hover:text-amber-600 transition-colors flex items-center group"
                   >
                     <ArrowRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transform -translate-x-4 group-hover:translate-x-0 transition-all" />
                     <span>{link}</span>
@@ -66,9 +66,9 @@ export default function Footer() {
               <Input
                 type="email"
                 placeholder="Enter Your Email"
-                className="bg-gray-800 border-gray-700 text-white focus:border-[#B8860B] transition-colors"
+                className="bg-gray-800 border-gray-700 text-white focus:border-amber-600 transition-colors"
               />
-              <Button className="bg-[#B8860B] hover:bg-[#B8860B]/90 transition-colors">
+              <Button className="bg-gradient-to-r from-amber-500 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-white transition-colors shadow-lg hover:shadow-amber-500/25">
                 Send <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>

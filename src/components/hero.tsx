@@ -14,7 +14,7 @@ export default function Hero() {
           <p className="text-xl text-gray-600 max-w-2xl">
             Experience the future of music creation through AI technology.
           </p>
-          <Button className="bg-[#B8860B] hover:bg-[#B8860B]/90 text-white h-12 px-8 text-lg rounded-full">
+          <Button className="bg-gradient-to-r from-amber-500 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-white h-12 px-8 text-lg rounded-full shadow-lg hover:shadow-amber-500/25 transition-all duration-300">
             Start Creating Music <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
@@ -30,7 +30,7 @@ export default function Hero() {
         </div>
         <div className="mt-16 text-center">
           <p className="text-xl">
-            We've published over <span className="text-[#B8860B] font-bold">650</span> episodes, amounting to nearly <span className="text-[#B8860B] font-bold">16,000 minutes</span> of powerful AI audio music and songs.
+            We've published over <span className="text-amber-700 font-bold">650</span> episodes, amounting to nearly <span className="text-amber-700 font-bold">16,000 minutes</span> of powerful AI audio music and songs.
           </p>
         </div>
         <ArtistLogos />

@@ -3,27 +3,59 @@
 @tailwind utilities;
 
 :root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
   --nagham-gold: #B45309;
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-amber-700;
+  }
+
+  .btn-gradient {
+    @apply bg-gradient-to-r from-amber-500 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-white;
+  }
+
+  .hover-card {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
 }
 
 body {
   background-color: #FFFBF5;
 }
 
-.animate-scroll {
-  animation: scroll 20s linear infinite;
+.gradient-bg {
+  background: linear-gradient(135deg, #F59E0B 0%, #B45309 100%);
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+.curved-gradient {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #FEF3C7 0%, #FFFBF5 100%);
 }
 
-.bg-gradient-radial {
-  background-image: radial-gradient(circle, rgba(251,191,36,0.1) 0%, rgba(255,255,255,0) 70%);
+.curved-gradient::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at center,
+    rgba(245, 158, 11, 0.1) 0%,
+    rgba(180, 83, 9, 0) 50%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.form-container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(245, 158, 11, 0.1);
+  box-shadow: 0 8px 32px rgba(180, 83, 9, 0.1);
 }
 

@@ -6,31 +6,31 @@ const voiceTypes = [
   {
     type: "Female",
     genre: "Traditional Pop",
-    color: "bg-[#B8860B]",
+    color: "bg-amber-700",
     image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81"
   },
   {
     type: "Male",
     genre: "Alternative Rock",
-    color: "bg-[#B8860B]/90",
+    color: "bg-amber-700/90",
     image: "https://images.unsplash.com/photo-1549834125-82d3c48159a3"
   },
   {
     type: "Female",
     genre: "French Pop",
-    color: "bg-[#B8860B]/80",
+    color: "bg-amber-700/80",
     image: "https://images.unsplash.com/photo-1583795128727-6ec3642408f8"
   },
   {
     type: "Male",
     genre: "Classic Pop Punk",
-    color: "bg-[#B8860B]/70",
+    color: "bg-amber-700/70",
     image: "https://images.unsplash.com/photo-1525362081669-2b476bb628c3"
   },
   {
     type: "Male",
     genre: "Afro Beat",
-    color: "bg-[#B8860B]/60",
+    color: "bg-amber-700/60",
     image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f"
   }
 ]
@@ -95,7 +95,7 @@ export default function Career() {
             </p>
             <div>
               <h3 className="text-2xl font-bold mb-4">Find Your Career Options</h3>
-              <Button className="bg-[#B8860B] hover:bg-[#B8860B]/90 text-white px-8 transition-colors">
+              <Button className="bg-gradient-to-r from-amber-500 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-white px-8 transition-colors shadow-lg hover:shadow-amber-500/25">
                 View Career <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>

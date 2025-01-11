@@ -8,7 +8,6 @@ import Testimonials from '@/components/testimonials'
 import About from '@/components/about'
 import Technology from '@/components/technology'
 import CTA from '@/components/cta'
-import Footer from '@/components/footer'
 
 export default function Home() {
   return (
@@ -25,7 +24,7 @@ export default function Home() {
         <Technology />
         <CTA />
       </main>
-      <Footer />
+      
     </div>
   )
 }

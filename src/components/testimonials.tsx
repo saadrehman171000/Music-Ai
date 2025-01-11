@@ -6,7 +6,7 @@ export default function Testimonials() {
     },
     {
       quote: "Fastest And Easiest Way To Demo With Any Voice",
-      background: "bg-[#B8860B]"
+      background: "bg-gradient-to-r from-amber-500 to-amber-700"
     },
     {
       quote: "AI Is So High Quality, That We Don't Need To Step Foot In A Recording Studio. You Can Capture Emotion With AI Vocals.",
@@ -24,11 +24,11 @@ export default function Testimonials() {
         <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-8">
           <h2 className="text-4xl font-bold text-white">What Our Users Say</h2>
           <div className="flex gap-12">
-            <div className="text-[#B8860B]">
+            <div className="text-amber-500">
               <div className="text-3xl font-bold">600,000+</div>
               <div className="text-sm">Voices Trained</div>
             </div>
-            <div className="text-[#B8860B]">
+            <div className="text-amber-500">
               <div className="text-3xl font-bold">500,000+</div>
               <div className="text-sm">Hours Of Audio Processed</div>
             </div>
@@ -40,7 +40,7 @@ export default function Testimonials() {
               key={index}
               className={`${testimonial.background} ${
                 testimonial.background === 'bg-white' ? 'text-black' : 'text-white'
-              } p-6 rounded-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}
+              } p-6 rounded-2xl hover:shadow-xl hover:shadow-amber-500/10 transition-all duration-300 hover:-translate-y-1`}
             >
               <p className="text-lg font-medium leading-relaxed">"{testimonial.quote}"</p>
             </div>
