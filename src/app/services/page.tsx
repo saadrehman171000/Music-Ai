@@ -1,39 +1,45 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Music, Wand2, SplitSquareVertical, Mic2, Settings2, Sparkles, ArrowRight, CheckCircle2 } from 'lucide-react'
-import Image from "next/image"
+import Link from "next/link"
 
 export default function ServicesPage() {
   const services = [
     {
       icon: <Music className="w-12 h-12 text-amber-600" />,
       title: "AI Music Generation",
-      description: "Create original music tracks with our advanced AI algorithms."
+      description: "Create original music tracks with our advanced AI algorithms.",
+      path: "/generate-music"
     },
     {
       icon: <Wand2 className="w-12 h-12 text-amber-600" />,
       title: "Style Transfer",
-      description: "Transform your music into different genres and styles instantly."
+      description: "Transform your music into different genres and styles instantly.",
+      path: "/dashboard"
     },
     {
       icon: <SplitSquareVertical className="w-12 h-12 text-amber-600" />,
       title: "Stem Separation",
-      description: "Extract individual instruments and vocals from any track."
+      description: "Extract individual instruments and vocals from any track.",
+      path: "/split-audio"
     },
     {
       icon: <Mic2 className="w-12 h-12 text-amber-600" />,
       title: "Voice Synthesis",
-      description: "Generate realistic vocal tracks with AI technology."
+      description: "Generate realistic vocal tracks with AI technology.",
+      path: "/voice-synthesis"
     },
     {
       icon: <Settings2 className="w-12 h-12 text-amber-600" />,
-      title: "Custom AI Models",
-      description: "Train personalized AI models with your own music style."
+      title: "Audio Mastering",
+      description: "Professional sound enhancement with AI-powered mastering.",
+      path: "/audio-mastering"
     },
     {
       icon: <Sparkles className="w-12 h-12 text-amber-600" />,
-      title: "Audio Enhancement",
-      description: "Improve sound quality with AI-powered mastering."
+      title: "Lyric Generation",
+      description: "Create engaging lyrics with our AI assistant.",
+      path: "/lyric-generation"
     }
   ]
 
@@ -61,9 +67,11 @@ export default function ServicesPage() {
                   </div>
                   <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-6">{service.description}</p>
-                  <Button variant="outline" className="group">
-                    Learn More 
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <Button variant="outline" className="group" asChild>
+                    <Link href={service.path}>
+                      Learn More 
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -104,11 +112,15 @@ export default function ServicesPage() {
                 Join thousands of creators who are already using Nagham AI to produce professional-quality music.
               </p>
               <div className="flex justify-center gap-4">
-                <Button className="bg-amber-500 hover:bg-amber-600 text-white">
-                  Get Started Now
+                <Button className="bg-amber-500 hover:bg-amber-600 text-white" asChild>
+                  <Link href="/dashboard">
+                    Get Started Now
+                  </Link>
                 </Button>
-                <Button variant="outline">
-                  View Pricing
+                <Button variant="outline" asChild>
+                  <Link href="/subscription">
+                    View Pricing
+                  </Link>
                 </Button>
               </div>
             </CardContent>
@@ -118,4 +130,3 @@ export default function ServicesPage() {
     </div>
   )
 }
-

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from 'lucide-react'
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Features() {
   return (
@@ -33,8 +34,13 @@ export default function Features() {
             <p className="text-gray-600 mb-6">
               Use our library of high-quality, royalty-free AI voices with the knowledge that each use contributes to artist compensation.
             </p>
-            <Button className="w-full bg-gradient-to-r from-amber-500 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-white shadow-lg hover:shadow-amber-500/25 transition-all duration-300">
-              Get Started <ArrowRight className="ml-2 h-4 w-4" />
+            <Button 
+              className="w-full bg-gradient-to-r from-amber-500 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-white shadow-lg hover:shadow-amber-500/25 transition-all duration-300"
+              asChild
+            >
+              <Link href="/dashboard">
+                Get Started <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
           </div>
           
@@ -63,8 +69,14 @@ export default function Features() {
                 </div>
               </div>
             </div>
-            <Button variant="secondary" className="w-full bg-white text-amber-700 hover:bg-white/90 transition-colors">
-              Get Started <ArrowRight className="ml-2 h-4 w-4" />
+            <Button 
+              variant="secondary" 
+              className="w-full bg-white text-amber-700 hover:bg-white/90 transition-colors"
+              asChild
+            >
+              <Link href="/dashboard">
+                Get Started <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
           </div>
 
@@ -73,8 +85,14 @@ export default function Features() {
             <p className="mb-6">
               Use our library of high-quality, royalty-free AI voices with the knowledge that each use contributes to artist compensation.
             </p>
-            <Button variant="secondary" className="w-full bg-gradient-to-r from-amber-500 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-white shadow-lg hover:shadow-amber-500/25 transition-all duration-300">
-              Get Started <ArrowRight className="ml-2 h-4 w-4" />
+            <Button 
+              variant="secondary" 
+              className="w-full bg-gradient-to-r from-amber-500 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-white shadow-lg hover:shadow-amber-500/25 transition-all duration-300"
+              asChild
+            >
+              <Link href="/dashboard">
+                Get Started <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
           </div>
         </div>
@@ -82,4 +100,3 @@ export default function Features() {
     </section>
   )
 }
-

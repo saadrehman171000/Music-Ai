@@ -117,8 +117,11 @@ export default function Header() {
           </Button>
           <Button 
             className="bg-gradient-to-r from-amber-500 to-amber-700 text-white hover:from-amber-600 hover:to-amber-800 shadow-lg hover:shadow-amber-500/25 transition-all duration-300"
+            asChild
           >
-            Get Started <ArrowRight className="ml-2 h-4 w-4" />
+            <Link href="/dashboard">
+              Get Started <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
           </Button>
         </div>
 
@@ -153,8 +156,11 @@ export default function Header() {
               <Button 
                 className="bg-gradient-to-r from-amber-500 to-amber-700 text-white hover:from-amber-600 hover:to-amber-800 shadow-lg hover:shadow-amber-500/25 transition-all duration-300"
                 onClick={() => setIsMenuOpen(false)}
+                asChild
               >
-                Get Started <ArrowRight className="ml-2 h-4 w-4" />
+                <Link href="/dashboard">
+                  Get Started <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
             </nav>
           </div>

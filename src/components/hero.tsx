@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from 'lucide-react'
 import Image from "next/image"
+import Link from "next/link"
 import ArtistLogos from './artist-logos'
 
 export default function Hero() {
@@ -14,8 +15,13 @@ export default function Hero() {
           <p className="text-xl text-gray-600 max-w-2xl">
             Experience the future of music creation through AI technology.
           </p>
-          <Button className="bg-gradient-to-r from-amber-500 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-white h-12 px-8 text-lg rounded-full shadow-lg hover:shadow-amber-500/25 transition-all duration-300">
-            Start Creating Music <ArrowRight className="ml-2 h-5 w-5" />
+          <Button 
+            className="bg-gradient-to-r from-amber-500 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-white h-12 px-8 text-lg rounded-full shadow-lg hover:shadow-amber-500/25 transition-all duration-300"
+            asChild
+          >
+            <Link href="/dashboard">
+              Start Creating Music <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
           </Button>
         </div>
         <div className="mt-16 relative rounded-2xl overflow-hidden">
